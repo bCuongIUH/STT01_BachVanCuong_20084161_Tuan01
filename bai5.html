@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Data 1
+        var dolphinsScores1 = [44, 23, 71];
+        var koalasScores1 = [65, 54, 49];
+
+        // Data 2
+        var dolphinsScores2 = [85, 54, 41];
+        var koalasScores2 = [23, 34, 27];
+
+        // Hàm tính trung bình cộng 3 điểm
+        var calcAverage = (scores) => scores.reduce((total, score) => total + score, 0) / scores.length;
+
+        // kiểm tra người chiến thắng và ghi lại kết quả
+        var checkWinner = (avgDolphins, avgKoalas) => {
+        if (avgDolphins >= 2 * avgKoalas) {
+            console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+        } else if (avgKoalas >= 2 * avgDolphins) {
+            console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+        } else {
+            console.log("No team wins!");
+        }
+        };
+
+        // điểm trung bình
+        var avgDolphins1 = calcAverage(dolphinsScores1);
+        var avgKoalas1 = calcAverage(koalasScores1);
+
+        var avgDolphins2 = calcAverage(dolphinsScores2);
+        var avgKoalas2 = calcAverage(koalasScores2);
+
+        // Kiểm tra người chiến thắng 
+        console.log("Data 1:");
+        checkWinner(avgDolphins1, avgKoalas1);
+
+        console.log("\nData 2:");
+        checkWinner(avgDolphins2, avgKoalas2);
+
+    </script>
+</body>
+</html>

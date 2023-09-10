@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Data 1
+        var markWeight1 = 78; // kg
+        var markHeight1 = 1.69; // meters
+
+        var johnWeight1 = 92; // kg
+        var johnHeight1 = 1.95; // meters
+
+        // Data 2
+        var markWeight2 = 95; // kg
+        var markHeight2 = 1.88; // meters
+
+        var johnWeight2 = 85; // kg
+        var johnHeight2 = 1.76; // meters
+
+        // Calculate BMIs
+        var calculateBMI = (weight, height) => weight / (height ** 2);
+
+        var markBMI1 = calculateBMI(markWeight1, markHeight1);
+        var johnBMI1 = calculateBMI(johnWeight1, johnHeight1);
+
+        var markBMI2 = calculateBMI(markWeight2, markHeight2);
+        var johnBMI2 = calculateBMI(johnWeight2, johnHeight2);
+
+        // Xác định ai có chỉ số BMI cao hơn cho cả hai bộ dữ liệu
+        var isMarkHigherBMI1 = markBMI1 > johnBMI1;
+        var isMarkHigherBMI2 = markBMI2 > johnBMI2;
+
+        // Create nice output messages
+        var message1 = isMarkHigherBMI1
+        
+       
+       
+            if (isMarkHigherBMI1)
+            console.log(`Mark has a ${markBMI1.toFixed(2)} higher BMI than John ${johnBMI1.toFixed(2)}`)
+        else
+            console.log(`John has a ${johnBMI1.toFixed(2)} higher BMI than Mark ${markBMI1.toFixed(2)}`)
+        //data 2
+        var message2 = isMarkHigherBMI2
+            if (isMarkHigherBMI2)
+            console.log(`Mark has a ${markBMI2.toFixed(2)} higher BMI than John ${johnBMI2.toFixed(2)}`)
+        else
+            console.log(`John has a ${johnBMI2.toFixed(2)} higher BMI than Mark ${markBMI2.toFixed(2)}`)
+        // in kết quả
+        console.log("Data 1:");
+        console.log(message1);
+
+        console.log("\nData 2:");
+        console.log(message2);
+
+    </script>
+</body>
+</html>
